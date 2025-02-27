@@ -13,10 +13,10 @@ export class Ejercicio05Component {
   ];
 
   users = [
-    { id: 0, name: 'Ailton' },
-    { id: 1, name: 'IECO' },
-    { id: 2, name: 'Juve' },
-    { id: 3, name: 'TONY' },
+    { id: 0, name: 'Aby' },
+    { id: 1, name: 'Teco' },
+    { id: 2, name: 'Maty' },
+    { id: 3, name: 'Beatriz' },
     { id: 4, name: 'Marcos' },
   ];
 }
