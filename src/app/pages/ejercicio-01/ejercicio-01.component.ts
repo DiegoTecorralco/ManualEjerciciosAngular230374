@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     :host {
-      color: #a144eb;
+      color:rgba(160, 68, 235, 0.8);
     }
 
     .hello-universe {
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
       justify-content: center;
       align-items: center;
       height: 10vh; /* Reduce la altura del div */
-      background-color:rgb(253, 236, 0);
+      background-color:rgba(147, 248, 209, 0.57);
     }
 
     h1 {

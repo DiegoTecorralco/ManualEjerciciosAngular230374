@@ -1,5 +1,5 @@
 .container {
-    background-color: rgb(111, 238, 111);
+    background-color: rgba(159, 238, 159, 0.397);
     padding: 20px;
     border-radius: 10px;
     animation: fadeIn 2s ease-in-out;
