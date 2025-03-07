@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageContainerComponent } from "./components/page-container/page-container.component";
 import { LoginComponent } from './login/login.component'; // Importar LoginComponent
+import { NgOptimizedImage } from '@angular/common'; // Importar NgOptimizedImage
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component'; // Importar LoginCompo
     RouterOutlet,
     NavbarComponent,
     PageContainerComponent,
-    LoginComponent // Incluir LoginComponent
+    LoginComponent, // Incluir LoginComponent
+    NgOptimizedImage  // Incluir NgOptimizedImage
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
