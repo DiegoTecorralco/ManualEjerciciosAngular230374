@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./ejercicio-08.component.css']
 })
 export class Ejercicio08Component {
-  @Input() name = '';
+  @Input() name = ''; // Recibe el nombre del usuario como un @Input
 }
