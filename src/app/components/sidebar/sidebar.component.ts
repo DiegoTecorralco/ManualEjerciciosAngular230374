@@ -65,8 +65,8 @@ export class SidebarComponent implements OnInit {
       icon: 'tables',
       expanded: false,
       children: [
-        { text: 'Materia Favorito', icon: 'Materia Favorito', route: '/color', description: 'Tabla donde se muestran las materias favoritas del grupo 5B', showDescription: false, extraDetails: 'Materias favoritas de cada uno de mis compañeros en tablas que contengan paginacion', showUnitName: false, showExerciseName: false, unitName: 'Unidad 2', exerciseName: 'Tabla de Libros Favoritos' },
-        { text: 'Enfermedades del corazon', icon: 'games', route: '/poke', description: 'Tabla donde se muestran las enfermedades del corazon', showDescription: false, extraDetails: 'Tabla de la bd Video Games Sales en tablas que contengan paginacion', showUnitName: false, showExerciseName: false, unitName: 'Unidad 2', exerciseName: 'Tabla de los Videojuegos' },
+        { text: 'Materia Favorito', icon: 'Materia Favorita', route: '/color', description: 'Tabla donde se muestran las materias favoritas del grupo 5B', showDescription: false, extraDetails: 'Materias favoritas de cada uno de mis compañeros en tablas que contengan paginacion', showUnitName: false, showExerciseName: false, unitName: 'Unidad 2', exerciseName: 'Tabla de Materia Favorita' },
+        { text: 'Enfermedades del corazon', icon: 'Enfermedades del corazon', route: '/poke', description: 'Tabla donde se muestran las enfermedades del corazon', showDescription: false, extraDetails: 'Tabla de la bd Heart Disease en tablas que contengan paginacion', showUnitName: false, showExerciseName: false, unitName: 'Unidad 2', exerciseName: 'Tabla de los Enfermedades' },
       ]
     },
     {
