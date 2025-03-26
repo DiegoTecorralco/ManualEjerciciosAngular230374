@@ -1,5 +1,5 @@
 {
-  "name": "manual-ejercicios-angular-230353",
+  "name": "manual-ejercicios-angular-230374",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:ManualEjerciciosAngular_230353": "node dist/manual-ejercicios-angular-230353/server/server.mjs"
+    "serve:ssr:ManualEjerciciosAngular_230374": "node dist/manual-ejercicios-angular-230374/server/server.mjs"
   },
   "private": true,
   "dependencies": {

@@ -1,44 +1,108 @@
 <div class="container">
-    <!-- Campo de búsqueda -->
-    <mat-form-field appearance="fill" class="search-field">
-      <mat-label>Buscar Enfermedades</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Buscar por nombre" #input>
-    </mat-form-field>
-  
-    <!-- Tabla de Angular Material -->
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-      <!-- Columna Número -->
-      <ng-container matColumnDef="numero">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Número </th>
-        <td mat-cell *matCellDef="let pokemon"> {{ pokemon.numero }} </td>
-      </ng-container>
-  
-      <!-- Columna Nombre -->
-      <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
-        <td mat-cell *matCellDef="let pokemon"> {{ pokemon.nombre }} </td>
-      </ng-container>
-  
-      <!-- Columna Tipo -->
-      <ng-container matColumnDef="tipo">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
-        <td mat-cell *matCellDef="let pokemon"> {{ pokemon.tipo }} </td>
-      </ng-container>
-  
-      <!-- Columna Enlace -->
-      <ng-container matColumnDef="enlace">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Enlace </th>
-        <td mat-cell *matCellDef="let pokemon">
-          <a [href]="pokemon.enlace" target="_blank" class="enlace">Ver</a>
-        </td>
-      </ng-container>
-  
-      <!-- Encabezado de la tabla -->
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <!-- Filas de la tabla -->
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-  
-    <!-- Paginación -->
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-  </div>
+  <!-- Campo de búsqueda -->
+  <mat-form-field appearance="fill" class="search-field">
+    <mat-label>Buscar por número</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Buscar por número" #input>
+  </mat-form-field>
+
+  <!-- Tabla de Angular Material -->
+  <table mat-table [dataSource]="personas" matSort class="mat-elevation-z8">
+    <!-- Columna Número -->
+    <ng-container matColumnDef="numero">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Número </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.numero }} </td>
+    </ng-container>
+
+    <!-- Columna Edad -->
+    <ng-container matColumnDef="edad">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Edad </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.edad }} </td>
+    </ng-container>
+
+    <!-- Columna Sexo -->
+    <ng-container matColumnDef="sexo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Sexo </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.sexo }} </td>
+    </ng-container>
+
+    <!-- Columna CP -->
+    <ng-container matColumnDef="cp">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> CP </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.cp }} </td>
+    </ng-container>
+
+    <!-- Columna Presión Sanguínea -->
+    <ng-container matColumnDef="presion_sanguinea">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Presión Sanguínea </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.presion_sanguinea }} </td>
+    </ng-container>
+
+    <!-- Columna Colesterol -->
+    <ng-container matColumnDef="colesterol">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Colesterol </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.colesterol }} </td>
+    </ng-container>
+
+    <!-- Columna FBS -->
+    <ng-container matColumnDef="fbs">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> FBS </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.fbs }} </td>
+    </ng-container>
+
+    <!-- Columna RestECG -->
+    <ng-container matColumnDef="restecg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> RestECG </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.restecg }} </td>
+    </ng-container>
+
+    <!-- Columna Frecuencia Máxima -->
+    <ng-container matColumnDef="frecuencia_maxima">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Frecuencia Máxima </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.frecuencia_maxima }} </td>
+    </ng-container>
+
+    <!-- Columna Exang -->
+    <ng-container matColumnDef="exang">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Exang </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.exang }} </td>
+    </ng-container>
+
+    <!-- Columna Oldpeak -->
+    <ng-container matColumnDef="oldpeak">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Oldpeak </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.oldpeak }} </td>
+    </ng-container>
+
+    <!-- Columna Slope -->
+    <ng-container matColumnDef="slope">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Slope </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.slope }} </td>
+    </ng-container>
+
+    <!-- Columna CA -->
+    <ng-container matColumnDef="ca">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> CA </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.ca }} </td>
+    </ng-container>
+
+    <!-- Columna Thal -->
+    <ng-container matColumnDef="thal">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Thal </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.thal }} </td>
+    </ng-container>
+
+    <!-- Columna Target -->
+    <ng-container matColumnDef="target">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Target </th>
+      <td mat-cell *matCellDef="let persona"> {{ persona.target }} </td>
+    </ng-container>
+
+    <!-- Encabezado de la tabla -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <!-- Filas de la tabla -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <!-- Paginación -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

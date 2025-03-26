@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ManualEjerciciosAngular_230353": {
+    "ManualEjerciciosAngular_230374": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/manual-ejercicios-angular-230353",
+            "outputPath": "dist/manual-ejercicios-angular-230374",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ManualEjerciciosAngular_230353:build:production"
+              "buildTarget": "ManualEjerciciosAngular_230374:build:production"
             },
             "development": {
-              "buildTarget": "ManualEjerciciosAngular_230353:build:development"
+              "buildTarget": "ManualEjerciciosAngular_230374:build:development"
             }
           },
           "defaultConfiguration": "development"
