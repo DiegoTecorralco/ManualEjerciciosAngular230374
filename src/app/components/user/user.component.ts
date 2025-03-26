@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class UserComponent {
 username= 'teco'
 email= 'teco@gmail.com'
-joinDate= '20/03/2025'
+joinDate= '26/03/2025'
 location= 'Xicotepec de Juarez'
 bio= 'Soy estudiante de TSU en Desarrollo de Software, apasionada por la tecnología y la programación. Me encanta resolver problemas complejos a través del código y aprender nuevas tecnologías.'
 }
