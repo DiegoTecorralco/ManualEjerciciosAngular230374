@@ -1,0 +1,88 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+::ng-deep .mat-expansion-panel-header {
+  padding: 0 16px !important;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  color: white !important;
+}
+
+::ng-deep .mat-expansion-panel {
+  background-color: transparent !important;
+  color: white !important;
+  border-radius: 8px;
+}
+
+::ng-deep .mat-expansion-panel-header:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+a {
+  border-radius: 8px;
+}
+
+a:hover {
+  background-color: #4b8bf5;
+}
+
+.mat-expansion-panel-header {
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.mat-expansion-panel {
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.mat-icon {
+  transition: transform 0.3s ease;
+}
+
+.mat-icon:hover {
+  transform: rotate(20deg);
+}
+
+.descripcion-ejercicio {
+  font-size: 12px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  margin-left: 36px;
+  border-left: 3px solid #0d3379;
+  border-radius: 4px;
+}
+
+.mat-expansion-panel .p-4 {
+  padding: 12px 20px;
+}
+
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #225dcc, #7facff, #5d7aae);
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}

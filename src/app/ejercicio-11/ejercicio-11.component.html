@@ -1,0 +1,16 @@
+<p class="text-lg text-gray-800 font-semibold mb-4">Username: 
+  <span class="font-bold text-orange-500">{{ username }}</span>
+</p>
+
+<p class="text-lg text-gray-800 font-semibold mb-4">Preferred Framework:</p>
+
+<ul class="space-y-4">
+  <li class="flex items-center space-x-3">
+    <span class="text-gray-700">Static Image:</span>
+    <img ngSrc="/angular.svg" alt="Angular logo" width="40" height="40"/>
+  </li>
+  <li class="flex items-center space-x-3">
+    <span class="text-gray-700">Dynamic Image:</span>
+    <img [ngSrc]="logoUrl" [alt]="logoAlt" width="40" height="40"/>
+  </li>
+</ul>

@@ -1,0 +1,30 @@
+.textoSaludo {
+    font-size: 1.25rem;
+    color: #4C4C4C;
+    font-family: 'Georgia', serif;
+    margin: 20px 0;
+    line-height: 1.5;
+  }
+  
+  .textoResaltado {
+    font-size: 1.5rem;
+    color: #cf3a85;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .textoResaltado:hover {
+    color: #1B5C47;
+  }
+  
+  @media (max-width: 768px) {
+    .textoSaludo {
+      font-size: 1.1rem;
+    }
+  
+    .textoResaltado {
+      font-size: 1.3rem;
+    }
+  }
+  

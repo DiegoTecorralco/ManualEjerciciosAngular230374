@@ -1,0 +1,72 @@
+<div *ngIf="sidebarVisible" class="bg-blue-400 text-white h-full overflow-y-auto">
+  <div class="p-4 bg-blue-900">
+    <h2 class="text-xl font-bold">Menu</h2>
+  </div>
+
+  <div class="mt-4 pb-16">
+    <ng-container *ngFor="let item of menuItems">
+
+      <a *ngIf="!item.children" 
+         [routerLink]="item.route" 
+         routerLinkActive="bg-blue-600"
+         [class.bg-blue-600]="isActive(item.route || '')"
+         class="flex items-center px-6 py-4 bg-yellow-200 text-white hover:bg-yellow-300 hover:text-white transition-colors cursor-pointer rounded-lg mb-2">
+        <mat-icon class="mr-3">{{ item.icon }}</mat-icon>
+        <span>{{ item.text }}</span>
+      </a>
+
+      <mat-expansion-panel *ngIf="item.children" class="mat-elevation-z0 border-0 mb-3">
+        <mat-expansion-panel-header (click)="toggleDescription(item)" class="px-6 py-4 hover:bg-blue-400 rounded-lg transition-all duration-300 ease-in-out">
+          <mat-panel-title class="flex items-center text-gray-300">
+            <mat-icon class="mr-3">{{ item.icon }}</mat-icon>
+            <span>{{ item.text }}</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="pl-6 pb-2">
+          <ng-container *ngFor="let child of item.children">
+            <mat-expansion-panel class="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 mb-3">
+              <mat-expansion-panel-header (click)="toggleDescription(child)" class="px-4 py-2 hover:bg-blue-700 rounded-lg transition-all duration-300 ease-in-out">
+                <mat-panel-title class="flex items-center text-gray-100">
+                  <mat-icon class="mr-2">{{ child.icon }}</mat-icon>
+                  {{ child.text }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <div *ngIf="child.showDescription" class="p-4 text-sm text-gray-200 space-y-3">
+                <div>{{ child.description || 'No hay descripción.' }}</div>
+
+                <mat-expansion-panel class="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mt-2">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Descripción Extra:</mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div class="p-2 text-sm text-gray-100">
+                    {{ child.extraDetails || 'No hay descripción adicional.' }}
+                  </div>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel class="bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 mt-2">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Unidad:</mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div class="p-2 text-sm text-gray-100">
+                    {{ child.unitName || 'Unidad no especificada.' }}
+                  </div>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel class="bg-gradient-to-r from-blue-800 via-blue-900 to-indigo-900 mt-2">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Ejercicio:</mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div class="p-2 text-sm text-gray-100">
+                    {{ child.exerciseName || 'Ejercicio sin nombre.' }}
+                  </div>
+                </mat-expansion-panel>
+              </div>
+            </mat-expansion-panel>
+          </ng-container>
+        </div>
+      </mat-expansion-panel>
+    </ng-container>
+  </div>
+</div>

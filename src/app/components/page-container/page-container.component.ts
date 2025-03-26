@@ -1,21 +1,38 @@
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { ContentComponent } from './content/content.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { FooterComponent } from './footer/footer.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { SidebarComponent } from '../sidebar/sidebar.component';
+import { ContentComponent } from '../content/content.component';
+import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { FooterComponent } from '../footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-page-container',
   standalone: true,
-  imports: [CommonModule, ContentComponent, SidebarComponent, FooterComponent, SidebarComponent, BreadcrumbComponent],  // Asegurar CommonModule
+  imports: [ RouterModule,CommonModule, SidebarComponent, ContentComponent, BreadcrumbComponent, NavbarComponent],
   templateUrl: './page-container.component.html',
-  styleUrls: ['./page-container.component.css']
+  styleUrl: './page-container.component.css'
 })
-export class PageContainerComponent {
-  isSidebarVisible = true;
-  
+export class PageContainerComponent implements OnInit {
+  sidebarVisible = true;
+  isLoginPage = false;
+
+  ngOnInit() {
+   if (typeof window !== 'undefined' && window.localStorage) {
+    const savedState = localStorage.getItem('sidebarVisible');
+    this.sidebarVisible = savedState ? savedState === 'true' : true;
+
+    window.addEventListener('sidebar-toggle', () => {
+      const newState = localStorage.getItem('sidebarVisible') === 'true';
+      this.sidebarVisible = newState;
+    });
+  }
+    
+  }
+
   toggleSidebar() {
-    this.isSidebarVisible = !this.isSidebarVisible;
+    this.sidebarVisible = !this.sidebarVisible;
+    localStorage.setItem('sidebarVisible', String(this.sidebarVisible));
   }
 }
