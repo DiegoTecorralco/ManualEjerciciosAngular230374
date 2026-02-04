@@ -57,8 +57,8 @@ export const routes: Routes = [
   { path: 'ejercicio-21', component: Ejercicio21Component },
 
 
-  {path: 'poke', component: EnfermedadesComponent},
-  {path: 'color', component: MateriaFavComponent},
+  {path: 'enfermedades', component: EnfermedadesComponent},
+  {path: 'materia', component: MateriaFavComponent},
   {path: 'grafica', component: ChartComponent},
   {path: 'graficaNueva', component: GraficaNuevaComponent},
 

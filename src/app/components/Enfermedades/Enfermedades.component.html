@@ -1,12 +1,12 @@
 <div class="container">
   <!-- Campo de búsqueda -->
   <mat-form-field appearance="fill" class="search-field">
-    <mat-label>Buscar por número</mat-label>
+    <mat-label>Buscar</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Buscar por número" #input>
   </mat-form-field>
 
   <!-- Tabla de Angular Material -->
-  <table mat-table [dataSource]="personas" matSort class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
     <!-- Columna Número -->
     <ng-container matColumnDef="numero">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Número </th>
@@ -104,5 +104,6 @@
   </table>
 
   <!-- Paginación -->
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons></mat-paginator>
 </div>
+
